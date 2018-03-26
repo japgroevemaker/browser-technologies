@@ -23,11 +23,11 @@ Werk 2 componenten uit in een demo. Je onderzoekt hoe je verschillende features 
 Kies minimaal twee componenten. 
 Één van de Romeinse en één van de Arabische serie.
 
-  i. FAQ lijst, een vragen lijst over de verschillende minorvakken
-  ii. Tabbladen, de 5 studenten met de meeste kudo’s 
-  iii. Accordeon, de drie favoriete docenten met meer informatie
-  iv. Responsive menu, dat een hamburger wordt op een klein scherm
-  v. … egen idee? Kom maar overleggen
+- i. FAQ lijst, een vragen lijst over de verschillende minorvakken
+- ii. Tabbladen, de 5 studenten met de meeste kudo’s 
+- iii. Accordeon, de drie favoriete docenten met meer informatie
+- iv. Responsive menu, dat een hamburger wordt op een klein scherm
+- v. … egen idee? Kom maar overleggen
 
 1. Carrousel van een aantal aankondigingen (met tekst en links in de tekst)
 2. Link + overlay/modal-window met algemene voorwaarden of extra specs 

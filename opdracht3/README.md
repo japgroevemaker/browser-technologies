@@ -4,7 +4,11 @@
 ## Opdracht 3 - Progressive Enhanced Browser Technologies
 //Browser Technologies onderzoeken en implementeren als enhancement. Basic functionaliteit van een use case doorgronden.
 
-Maak een demo op basis van een use case. Zorg dat alle gebruikers, met alle browsers, in iedere context minimaal de core functionaliteit te zien/horen/voelen krijgen. Bouw je demo in 3 lagen, volgens het principe van Progressive Enhancement. Gebruik als enhanced feature een (hippe, innovatieve, vooruitstrevende) Browser Technologie die je gaat onderzoeken op functionaliteit, toegankelijkheid en (browser) ondersteuning.
+Maak een demo op basis van een use case. Zorg dat alle gebruikers, met alle browsers, in iedere context minimaal de core functionaliteit te zien/horen/voelen krijgen. 
+Bouw je demo in 3 lagen, volgens het principe van Progressive Enhancement. 
+Gebruik als enhancement een (hippe, innovatieve, vooruitstrevende) Browser Technologie die je gaat onderzoeken op functionaliteit, toegankelijkheid en (browser) ondersteuning. De meest 'enhanced' versie is super vet, gaaf en h-e-l-e-maal te leuk om te gebruiken, …
+Gebruik de Pattern Primer van de Voorhoede om de use case te ontwerpen. (bepaal de core functionaliteit, acceptable en de enjoyable laag)
+
 
 ### Beoordelingscriteria
 - De code staat in een repository op GitHub
@@ -21,14 +25,17 @@ Maak een demo op basis van een use case. Zorg dat alle gebruikers, met alle brow
 - Student kan de Basic functionaliteit van een use case doorgronden
 - Student kan uitleggen wat Progressive Enhancement en Feature Detectie is en hoe dit toe te passen in Web Development
 
+
 ### Usecases
 Kies één van deze use cases. Combineren mag ook. De aangeboden Browser Technologie is bedoeld als tip om te onderzoeken, je kan ook een andere kiezen.
-1. Ik wil in een lijst contacten kunnen zoeken, en details kunnen bekijken - Sticky Position
-2. Ik wil een notificatie krijgen als mijn favoriete voetbalteam heeft gewonnen Notifications
-3. Ik wil favoriete t-shirts-met-nerdy-teksten kunnen opslaan, en een volgende keer dat ik de site bezoek kunnen gebruiken - Web storage
-4. Ik wil boodschappen-om-tostis-te-maken in mijn boodschappenlijstje kunnen gooien - Drag Drop
-5. Ik wil tegen de helpdesk kunnen klagen over een i-frame-dat-het-niet-doet, en direct antwoord krijgen - Web RTC
-6. Ik wil tijdens een college aan studenten een poll kunnen voorleggen en de resultaten meteen kunnen laten zien - Websocket
-7. Ik wil kunnen beatboxen! - Web Audio
-8. Ik wil tegen iemand anders een spelletje Pong spelen - Multi touch
+1. Ik wil in een lijst contacten kunnen filteren, en details kunnen bekijken.
+2. Ik wil een notificatie krijgen als mijn favoriete badmintonteam heeft gewonnen.
+3. Ik wil mijn eigen t-shirt-met-nerdy-tekst kunnen ontwerpen, printen, opslaan, en een volgende keer dat ik de site bezoek kunnen gebruiken.
+4. Ik wil boodschappen-om-tostis-te-maken in mijn boodschappenlijstje kunnen gooien.
+5. Ik wil tegen de helpdesk kunnen klagen over een iframe-dat-het-niet-doet, en direct antwoord krijgen.
+6. Ik wil de routebeschrijving van mijn huis tot aan het device lab stap voor stap kunnen zien.
+7. Ik wil tijdens een college aan studenten een poll kunnen voorleggen en de resultaten meteen kunnen laten zien.
+8. Ik wil kunnen beatboxen!
+9. Ik wil tegen iemand anders een spelletje Pong spelen.
+10. Eigen idee? Kom even overleggen ...
 
