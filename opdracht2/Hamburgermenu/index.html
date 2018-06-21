@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Browser Tech - opdracht 2</title>
+  <meta name="viewport" content="width=device-width">
+</head>
+
+<style>
+  :root {
+    --link-color: #ff5050;
+    --font-type: 'Poppins', sans-serif;
+    --font-second: 'Libre Baskerville', serif;
+    --shadow: 5px 5px 0px 0px rgba(117, 117, 117, 0.44);
+    --border: solid 0.01em #f2f2f2;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #fff;
+  }
+
+  section {
+    width: 50%;
+    background-color: #fff;
+    margin: 1em auto;
+    border: var(--border);
+    box-shadow: var(--shadow);
+  }
+
+  section h1 {
+    font-family: var(--font-second);
+    font-size: 2em;
+    margin-bottom: 1em;
+    margin-top: 3em;
+    text-align: center;
+  }
+
+  section p {
+    font-family: var(--font-type);
+    width: 70%;
+    margin: auto;
+    line-height: 1.6em;
+    border-bottom: var(--border);
+  }
+
+  header {
+    width: 90%;
+    height: 5em;
+    border-bottom: solid 0.1em #000;
+    margin: auto;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .menuCSS {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    width: 11em;
+    height: 21em;
+    top: -1em;
+    left: 0;
+  }
+
+  .block {
+    display: block;
+  }
+
+  #menu {
+    background-color: #000;
+    list-style-type: none;
+    margin: -0.5em;
+    width: 11em;
+    height: 21em;
+  }
+
+  #menu a p {
+    color: #fff;
+    margin-top: 2em;
+  }
+
+  ul li {
+    font-family: var(--font-type), sans-serif;
+    font-size: 1.5em;
+    color: #fff;
+    margin-top: 2em;
+  }
+
+  ul li span {
+    cursor: pointer;
+    font-size: 2em;
+  }
+</style>
+
+<body>
+
+  <head>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A400%2C300%7CLibre+Baskerville%3Aregular%2Citalic%2C700' />
+  </head>
+
+  <header>
+    <a id="top" href="#menu">Menu</a>
+  </header>
+
+  <article>
+    <section>
+      <h1>Wat is Lorem Ipsum?</h1>
+      <p>
+        Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus
+        te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer
+        recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
+      </p>
+
+
+
+      <h1>Waarom gebruiken we het?</h1>
+      <p>
+        Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud. Het belangrijke punt van het gebruik van Lorem Ipsum is dat het uit een min of meer normale verdeling
+        van letters bestaat, in tegenstelling tot "Hier uw tekst, hier uw tekst" wat het tot min of meer leesbaar nederlands maakt. Veel desktop publishing pakketten en web pagina editors gebruiken tegenwoordig Lorem Ipsum als hun standaard model tekst,
+        en een zoekopdracht naar "lorem ipsum" ontsluit veel websites die nog in aanbouw zijn. Verscheidene versies hebben zich ontwikkeld in de loop van de jaren, soms per ongeluk soms expres (ingevoegde humor en dergelijke).
+      </p>
+
+
+
+      <h1>Waar komt het vandaan?</h1>
+      <p>
+        n tegenstelling tot wat algemeen aangenomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een professor latijn
+        aan de Hampden-Sydney College in Virginia, heeft één van de meer obscure latijnse woorden, consectetur, uit een Lorem Ipsum passage opgezocht, en heeft tijdens het zoeken naar het woord in de klassieke literatuur de onverdachte bron ontdekt. Lorem
+        Ipsum komt uit de secties 1.10.32 en 1.10.33 van "de Finibus Bonorum et Malorum" (De uitersten van goed en kwaad) door Cicero, geschreven in 45 v.Chr. Dit boek is een verhandeling over de theorie der ethiek, erg populair tijdens de renaissance.
+        De eerste regel van Lorem Ipsum, "Lorem ipsum dolor sit amet..", komt uit een zin in sectie 1.10.32. Het standaard stuk van Lorum Ipsum wat sinds de 16e eeuw wordt gebruikt is hieronder, voor wie er interesse in heeft, weergegeven. Secties 1.10.32
+        en 1.10.33 van "de Finibus Bonorum et Malorum" door Cicero zijn ook weergegeven in hun exacte originele vorm, vergezeld van engelse versies van de 1914 vertaling door H. Rackham.
+      </p>
+
+
+
+      <h1>Waar kan ik het vinden?</h1>
+      <p>
+        Er zijn vele variaties van passages van Lorem Ipsum beschikbaar maar het merendeel heeft te lijden gehad van wijzigingen in een of andere vorm, door ingevoegde humor of willekeurig gekozen woorden die nog niet half geloofwaardig ogen. Als u een passage
+        uit Lorum Ipsum gaat gebruiken dient u zich ervan te verzekeren dat er niets beschamends midden in de tekst verborgen zit. Alle Lorum Ipsum generators op Internet hebben de eigenschap voorgedefinieerde stukken te herhalen waar nodig zodat dit
+        de eerste echte generator is op internet. Het gebruikt een woordenlijst van 200 latijnse woorden gecombineerd met een handvol zinsstructuur modellen om een Lorum Ipsum te genereren die redelijk overkomt. De gegenereerde Lorum Ipsum is daardoor
+        altijd vrij van herhaling, ingevoegde humor of ongebruikelijke woorden etc.
+      </p>
+
+
+
+      <h1>Wat is Lorem Ipsum?</h1>
+      <p>
+        Lorem Ipsum is slechts een proeftekst uit het drukkerij- en zetterijwezen. Lorem Ipsum is de standaard proeftekst in deze bedrijfstak sinds de 16e eeuw, toen een onbekende drukker een zethaak met letters nam en ze door elkaar husselde om een font-catalogus
+        te maken. Het heeft niet alleen vijf eeuwen overleefd maar is ook, vrijwel onveranderd, overgenomen in elektronische letterzetting. Het is in de jaren '60 populair geworden met de introductie van Letraset vellen met Lorem Ipsum passages en meer
+        recentelijk door desktop publishing software zoals Aldus PageMaker die versies van Lorem Ipsum bevatten.
+      </p>
+
+
+
+      <h1>Waarom gebruiken we het?</h1>
+      <p>
+        Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud. Het belangrijke punt van het gebruik van Lorem Ipsum is dat het uit een min of meer normale verdeling
+        van letters bestaat, in tegenstelling tot "Hier uw tekst, hier uw tekst" wat het tot min of meer leesbaar nederlands maakt. Veel desktop publishing pakketten en web pagina editors gebruiken tegenwoordig Lorem Ipsum als hun standaard model tekst,
+        en een zoekopdracht naar "lorem ipsum" ontsluit veel websites die nog in aanbouw zijn. Verscheidene versies hebben zich ontwikkeld in de loop van de jaren, soms per ongeluk soms expres (ingevoegde humor en dergelijke).
+      </p>
+
+
+
+      <h1>Waar komt het vandaan?</h1>
+      <p>
+        n tegenstelling tot wat algemeen aangenomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een professor latijn
+        aan de Hampden-Sydney College in Virginia, heeft één van de meer obscure latijnse woorden, consectetur, uit een Lorem Ipsum passage opgezocht, en heeft tijdens het zoeken naar het woord in de klassieke literatuur de onverdachte bron ontdekt. Lorem
+        Ipsum komt uit de secties 1.10.32 en 1.10.33 van "de Finibus Bonorum et Malorum" (De uitersten van goed en kwaad) door Cicero, geschreven in 45 v.Chr. Dit boek is een verhandeling over de theorie der ethiek, erg populair tijdens de renaissance.
+        De eerste regel van Lorem Ipsum, "Lorem ipsum dolor sit amet..", komt uit een zin in sectie 1.10.32. Het standaard stuk van Lorum Ipsum wat sinds de 16e eeuw wordt gebruikt is hieronder, voor wie er interesse in heeft, weergegeven. Secties 1.10.32
+        en 1.10.33 van "de Finibus Bonorum et Malorum" door Cicero zijn ook weergegeven in hun exacte originele vorm, vergezeld van engelse versies van de 1914 vertaling door H. Rackham.
+      </p>
+
+      <h1>Waar kan ik het vinden?</h1>
+      <p>
+        Er zijn vele variaties van passages van Lorem Ipsum beschikbaar maar het merendeel heeft te lijden gehad van wijzigingen in een of andere vorm, door ingevoegde humor of willekeurig gekozen woorden die nog niet half geloofwaardig ogen. Als u een passage
+        uit Lorum Ipsum gaat gebruiken dient u zich ervan te verzekeren dat er niets beschamends midden in de tekst verborgen zit. Alle Lorum Ipsum generators op Internet hebben de eigenschap voorgedefinieerde stukken te herhalen waar nodig zodat dit
+        de eerste echte generator is op internet. Het gebruikt een woordenlijst van 200 latijnse woorden gecombineerd met een handvol zinsstructuur modellen om een Lorum Ipsum te genereren die redelijk overkomt. De gegenereerde Lorum Ipsum is daardoor
+        altijd vrij van herhaling, ingevoegde humor of ongebruikelijke woorden etc.
+      </p>
+    </section>
+
+    <nav role="navigation">
+
+      <ul class="none" id="menu">
+        <a class="close" href="#top">
+          <p>Sluiten</p>
+        </a>
+        <li>Alpha</li>
+        <li>Bravo</li>
+        <li>Charlie</li>
+      </ul>
+    </nav>
+
+    <script>
+      var nav = document.querySelector('ul');
+      nav.classList.add('menuCSS');
+
+      if (document.classList == 'undefined') {
+
+        var btn = document.getElementsByTagName("a")[0];
+
+        var closeNav = document.getElementsByClassName('close')[0];
+
+
+        btn.addEventListener('click', function() {
+          nav.style.display = "block";
+        });
+
+        closeNav.addEventListener('click', function() {
+          nav.style.display = "none";
+        });
+
+      } else {
+
+        var btn = document.querySelectorAll('a');
+
+        for (var i = 0; i < btn.length; i++) {
+          btn[i].addEventListener('click', function() {
+
+            nav.classList.toggle('block')
+
+          })
+        }
+      }
+    </script>
+
+</body>
+
+</html>

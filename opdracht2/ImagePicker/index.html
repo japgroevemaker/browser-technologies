@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    body {
+      background-color: #ff6666;
+      text-align: center;
+    }
+
+    img {
+      width: 20em;
+      height: auto;
+      margin: 2em auto;
+    }
+
+    form {
+      width: 30em;
+      margin: auto;
+    }
+
+    section {
+      background-color: #fff;
+      width: 70%;
+      height: auto;
+      margin: auto;
+    }
+
+    @supports (display: flex) {
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      form {
+        margin: 1em;
+      }
+
+      img {
+        margin: 1em;
+      }
+    }
+  </style>
+</head>
+
+<section>
+
+  <form target="_blank" class="" action="" method="">
+    <input type="file" accept="image/*">
+  </form>
+</section>
+
+<script>
+  if (window.FileReader) {
+    var inputImg = document.getElementsByTagName('input')[0];
+    var box = document.getElementsByTagName('section')[0];
+
+    var placeholder = document.createElement('img');
+
+    placeholder.setAttribute('src', 'image/placeholder.jpg')
+
+    box.appendChild(placeholder)
+    box.appendChild(inputImg)
+
+    inputImg.addEventListener('change', function() {
+      openFile()
+    });
+
+    function openFile() {
+      var img = inputImg.files[0]
+      var reader = new FileReader();
+      reader.readAsDataURL(img);
+
+      reader.onload = function() {
+        placeholder.setAttribute('src', reader.result)
+      }
+    }
+  }
+</script>
+</body>
+
+</html>
