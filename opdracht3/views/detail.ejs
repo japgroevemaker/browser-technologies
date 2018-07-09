@@ -1,0 +1,12 @@
+<% include head.ejs %>
+
+<div class="contact-page">
+  <img src="<%= data[0].photo %>" alt="<%= data[0].name %> <%= data[0].surname %>">
+  <h2><%= data[0].name %> <%= data[0].surname %></h2>
+  <p>Mobiel</p>
+  <p><%= data[0].phone %></p>
+  <p>Email</p>
+  <a href="mailto:<%= data[0].email %>"><%= data[0].email %></a>
+  <p>Verjaardag</p>
+  <p><%= data[0].birthday.dmy %></p>
+</div>

@@ -1,0 +1,49 @@
+<% include head.ejs %>
+
+<div id="nav">
+  <ul>
+    <% data.forEach((el) => { %>
+    <li class="menu-item"><a href="#<%= el.letter %>"><%= el.letter %></a></li>
+    <% }) %>
+  </ul>
+</div>
+
+<div id="main-content">
+  <div id="search-box">
+
+  </div>
+  <% data.forEach((el) => { %>
+    <div class="letter-indicator" id="<%= el.letter %>">
+      <h3><%= el.letter %></h3>
+        <ul>
+          <% el.naam.forEach((contact) => { %>
+          <li class="contact">
+            <details>
+              <summary>
+                <div class="contact-summary">
+                  <img src="<%= contact.photo %>" alt="<%= contact.name %>">
+                  <div>
+                    <h2><%= contact.name %> <%= contact.surname %></h2>
+                    <p><%= contact.phone %></p>
+                    <a class="link none" href="/detail?id=<%= contact.name %> <%= contact.surname %>">Info</a>
+                  </div>
+                </div>
+              </summary>
+                <div id="contact-details">
+                  <p>Mobiel</p>
+                  <h2><%= contact.phone %></h2>
+                  <p>Email</p>
+                  <a href="mailto:<%= contact.email %>"><%= contact.email %></a>
+                  <p>Verjaardag</p>
+                  <h2><%= contact.birthday.dmy %></h2>
+                </div>
+            </details>
+          </li>
+          <% }) %>
+        </ul>
+    </div>
+    <% }) %>
+</div>
+
+
+<% include footer.ejs %>

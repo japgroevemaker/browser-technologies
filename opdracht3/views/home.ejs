@@ -1,0 +1,33 @@
+<main>
+  <% data.forEach((el) => { %>
+    <section id="<%= el.letter %>">
+      <h2><%= el.letter %></h2>
+        <ul>
+          <% el.naam.forEach((contact) => { %>
+          <li>
+
+            <details>
+              <summary>
+                <a href="/detail?id=<%= contact.name %> <%= contact.surname %>">
+                <img src="<%= contact.photo %>" alt="<%= contact.name %>">
+                <div>
+                  <h2><%= contact.name %> <%= contact.surname %></h2>
+                  <p><%= contact.phone %></p>
+                </div>
+                </a>
+              </summary>
+                <div class="contact-details">
+                  <p>Mobiel</p>
+                  <h2><%= contact.phone %></h2>
+                  <p>Email</p>
+                  <a href="mailto:<%= contact.email %>"><%= contact.email %></a>
+                  <p>Verjaardag</p>
+                  <h2><%= contact.birthday.dmy %></h2>
+                </div>
+            </details>
+          </li>
+          <% }) %>
+        </ul>
+    </section>
+    <% }) %>
+</main>

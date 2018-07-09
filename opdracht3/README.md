@@ -1,41 +1,99 @@
-# Browser Technologies
-//Robuuste, toegankelijke websites leren bouwen …
+# Assingment 3
+## Case
+A phonelist full of contacts. You need to be able to filter on name and  click on the contact to see details.
+[Live demo](https://opdracht3-ngbuabdffj.now.sh)
 
-## Opdracht 3 - Progressive Enhanced Browser Technologies
-//Browser Technologies onderzoeken en implementeren als enhancement. Basic functionaliteit van een use case doorgronden.
+## Core functionality
+You need to be able to quickly search a contact by typing in a name in the searchbar or navigate quickly to the contact by using the letters on the rightside of the screen. When you find the contact you can see his phone number, birthdate and age. You can also click on the button mail me to quickly write an email to the contact.
 
-Maak een demo op basis van een use case. Zorg dat alle gebruikers, met alle browsers, in iedere context minimaal de core functionaliteit te zien/horen/voelen krijgen. 
-Bouw je demo in 3 lagen, volgens het principe van Progressive Enhancement. 
-Gebruik als enhancement een (hippe, innovatieve, vooruitstrevende) Browser Technologie die je gaat onderzoeken op functionaliteit, toegankelijkheid en (browser) ondersteuning. De meest 'enhanced' versie is super vet, gaaf en h-e-l-e-maal te leuk om te gebruiken, …
-Gebruik de Pattern Primer van de Voorhoede om de use case te ontwerpen. (bepaal de core functionaliteit, acceptable en de enjoyable laag)
+## Installation
+npm install
 
+## Dependencies
+```
+| Package | Version |     
+|---------|---------|
+| EJS     | 2.5.8   |  
+| Express | 4.16.3  |
+```
+I also installed ```node-fetch```. With this i can ```fetch``` my api server-side. So even when ```javascript``` has been turned off, i'm still able to look for contacts!
 
-### Beoordelingscriteria
-- De code staat in een repository op GitHub
-- Er is een Readme toegevoegd met daarin beschreven:
-  - een beschrijving van de core functionality
-  - een beschrijving van de feature(s)/Browser Technologies
-  - welke browser de feature(s) wel/niet ondersteunen
-  - een beschrijving van de accessibility issues die zijn onderzocht
-- De demo is opgebouwd in 3 lagen, volgens het principe van Progressive Enhancement
-- De user experience van de demo is goed
-  - de leesbaarheidsregels zijn toegepast, contrast en kleuren kloppen
-  - het heeft een gebruiksvriendelijke interface, met gebruikmaking van affordance en feedback op de interactieve elementen
-  - met meest 'enhanced' versie is super vet, gaaf en h-e-l-e-maal te leuk om te gebruiken
-- Student kan de Basic functionaliteit van een use case doorgronden
-- Student kan uitleggen wat Progressive Enhancement en Feature Detectie is en hoe dit toe te passen in Web Development
+## At first
+I didn't want to statically add contacts. But then Krijn noticed that [UInames](https://uinames.com/)  is an API which random generates names and number. That is wat i wanted to do.
 
+## Features
+* Searching for contact by searchbar
+If javascript is enabled, there is an search bar where you can type in the name you're looking for.
 
-### Usecases
-Kies één van deze use cases. Combineren mag ook. De aangeboden Browser Technologie is bedoeld als tip om te onderzoeken, je kan ook een andere kiezen.
-1. Ik wil in een lijst contacten kunnen filteren, en details kunnen bekijken.
-2. Ik wil een notificatie krijgen als mijn favoriete badmintonteam heeft gewonnen.
-3. Ik wil mijn eigen t-shirt-met-nerdy-tekst kunnen ontwerpen, printen, opslaan, en een volgende keer dat ik de site bezoek kunnen gebruiken.
-4. Ik wil boodschappen-om-tostis-te-maken in mijn boodschappenlijstje kunnen gooien.
-5. Ik wil tegen de helpdesk kunnen klagen over een iframe-dat-het-niet-doet, en direct antwoord krijgen.
-6. Ik wil de routebeschrijving van mijn huis tot aan het device lab stap voor stap kunnen zien.
-7. Ik wil tijdens een college aan studenten een poll kunnen voorleggen en de resultaten meteen kunnen laten zien.
-8. Ik wil kunnen beatboxen!
-9. Ik wil tegen iemand anders een spelletje Pong spelen.
-10. Eigen idee? Kom even overleggen ...
+* Searching for contact by letter of the alphabet
+If javascript is disabled, a bar with the first letter of the alphabet are displayed. When you click, for example, on the T the page navigates to the contacts which names starts with an T.
 
+* Controlling the page with keyboard
+The page must be fully controllable with keyboard.
+
+## Feature detection
+### details & summary
+I found out that the ```<details>``` and ```<summary>``` tags are not that well [supported](https://caniuse.com/#search=details). For example, they are not supported at all in IE and Edge. But what are the ```<details>``` and ```<summary>``` tags? [can i use](https://caniuse.com/) explains it like this: <details><summary>Click this</summary> The ```<details>``` element generates a simple no-JavaScript widget to show/hide element contents, optionally by clicking on its child ```<summary>``` element.</details>
+
+This is not a real disaster when they are not supported as the browsers shows the hidden items within the ```<details>``` tag. But i wanted the page not to look to diffrent on older browsers, so i wrote feature detection for this.
+```js
+if (!('open' in document.createElement('details') === true)) {
+  // Code
+}
+```
+Finding out how to write the feature detection for the ```details``` tag wasn't easy. I found it on this [page.](http://html5doctor.com/the-details-and-summary-elements/)
+
+### querySelector & querySelectorAll
+```querySelector ``` and ```querySelectorAll``` are fully [supported](https://caniuse.com/#search=queryselector) from IE9 on. So i wanted to write a feature detection for that. I have an search function implemented in my page where you can type in an name in the search bar and than it is found. But i only want it to show when ```querySelector``` and ```querySelectorAll``` is supported. So i wrote this.
+```js
+if (typeof document.querySelectorAll === 'function') {
+  // Code
+}
+```
+If it is supported javascript creates an ```input``` element and gives it a class name.
+```js
+var input = document.createElement('input')
+input.setAttribute('type', 'search');
+input.setAttribute('placeholder', 'Zoek naar contact')
+input.className = 'search'
+```
+
+I wanted to let my search function also work on IE9. But when i tested it, i didn't work. And i was wondering why? Because ```querySelectorAll``` is supported by IE9.
+Then i looked in the console of IE and it showed this error ``` SCRIPT5007: Unable to get property 'add' of undefined or null reference``` and i discovered that [```classList```](https://caniuse.com/#search=classlist) is not supported in IE9. So i changed ```classList``` to ```className```. Problem solved.
+
+### forEach & for loop
+At first i used ```forEach``` for the search function. But then in IE9 my search function didn't work. That is because ```forEach``` is not [supported](https://caniuse.com/#search=foreach). So i wrote feature detection for it.
+```js
+if (typeof NodeList.prototype.forEach === 'function') {
+  // use forEach
+} else {
+  // use for loop
+}
+```
+
+### CSS
+If the browser supports ```display: flex;``` it is using that.
+```CSS
+@supports (display: flex){
+  #main-content {
+    width: 100%;
+  }
+
+  .contact-summary img {
+    margin: auto 0;
+    float: none;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .search-box {
+    display: flex;
+    justify-content: center;
+  }
+}
+```
+
+### ```<nav>```, ```<main>```, ```<section>```
+At first i was using fancy HTML tags. But when i noticed that my styling broke i started to check caniuse and noticed that [nav, main and section](https://caniuse.com/#search=nav) are not supported in IE. So i turned all these tags into ```<div>```'s
+
+## Testing
