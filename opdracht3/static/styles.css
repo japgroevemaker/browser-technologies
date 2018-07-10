@@ -244,9 +244,31 @@ details summary::-webkit-details-marker {
   }
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 30em) {
   #main-content {
-    width: 30%;
+    width: 70%;
+    margin: auto;
+  }
+
+  summary img {
+    margin-right: 20%;
+  }
+}
+
+@media (min-width: 50em) {
+  #main-content {
+    width: 50%;
+    margin: auto;
+  }
+
+  summary img {
+    margin-right: 20%;
+  }
+}
+
+@media (min-width: 70em) {
+  #main-content {
+    width: 35%;
     margin: auto;
   }
 

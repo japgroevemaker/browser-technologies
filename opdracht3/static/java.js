@@ -2,13 +2,13 @@
 
 if (!('open' in document.createElement('details') === true)) {
   console.log('undefined');
-  var link = document.querySelectorAll('.link');
+  var link = document.getElementsByTagName('.link');
 
   for (var i = 0; i < link.length; i++) {
     link[i].className = '';
   }
 
-  var contactDetails = document.querySelectorAll('#contact-details')
+  var contactDetails = document.getElementById('#contact-details')
   for (var i = 0; i < contactDetails.length; i++) {
     contactDetails[i].className = 'none';
   }
@@ -43,7 +43,6 @@ if (typeof document.querySelectorAll === 'function') {
 
     var letterIndicators = document.querySelectorAll('.letter-indicator');
 
-    var menuItems = document.querySelectorAll('.menu-item');
 
     if (typeof NodeList.prototype.forEach === 'function') {
       console.log('forEach');

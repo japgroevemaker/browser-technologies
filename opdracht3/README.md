@@ -97,3 +97,48 @@ If the browser supports ```display: flex;``` it is using that.
 At first i was using fancy HTML tags. But when i noticed that my styling broke i started to check caniuse and noticed that [nav, main and section](https://caniuse.com/#search=nav) are not supported in IE. So i turned all these tags into ```<div>```'s
 
 ## Testing
+### Operation
+##### No CSS
+Without CSS my contact list looks pretty shitty. Altough the ```<details>``` and ```<summary>``` tags are still working, i can not use my search function as i'm toggling classes with my client-side javascript.
+![No CSS](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/noCSS.jpg)
+
+##### No javascript
+Without JavaScript the page actually works pretty fine. The search input isn't visible because i create that with javascript, but the search function on alphabet is visible because i also hide that with JavaScript.
+![No JS](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/noJS.jpg)
+
+### Browser testing
+##### IE7
+In IE7 all works pretty fine, as you can see it displays all that should have been hidden in the ```<details>``` tag. Not very pretty, but it works. Because IE7 doesn't support ```querySelector``` and ```querySelectorAll``` the search bar isn't created by javascript but you can still search on alphabet.
+![IE7](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/IE7.jpg)
+
+##### IE8
+Because ```querySelector``` and ```querySelectorAll``` are only partial supported in IE8, it only runs some of the functions i build in. It hides the left over content from the ```<details>``` tag and it displays the link by removing the ```.none``` class. And when you click the link you go to the contact detail page with the details of the contact. But my search function doesn't work. Altough it shows the letters of the alphabet so you can still search by the letter of the alphabet.
+![IE8](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/IE8.jpg)
+
+##### IE9
+In IE9 it all starts to get a little bit better. The search function is created due to the full support of ```querySelector``` and ```querySelectorAll```. For some reason the ```placeholder``` i created doesn't show. The ```<details>``` tag still cannot be recognized by the browser, it still shows the link to the details of the contact. Also the transitions i made start working from IE9. Not perfect, but they work.
+![IE9](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/IE9.jpg)
+
+##### IE10
+In IE10 the page practically works the same as IE9, only this time the placeholders shows.
+ ![IE10](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/IE10.jpg)
+
+##### Edge
+In Edge all works pretty fine, but still the ```<details>``` and ```<summary>``` aren't supported.
+![IE10](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/EDGE.jpg)
+
+##### Firefox
+In Firefox the ```<details>``` tag is supported but the CSS line where i remove the little arrow aren't recognized.
+![Firefox](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/Firefox.jpg)
+
+##### Opera
+In opera it works optimally. the ```<details>``` tag is supported and works very fine.
+![Opera](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/opera.jpg)
+
+##### Safari
+In safari everything works fine. Altough the styling of the ```<input>``` element isn't implemented, all the functionalities are working.
+![Safari](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/safari.jpg)
+
+##### Chrome
+Chrome is such a nice browser, no wonder everything works good!.
+![Safari](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/chrome.jpg)
