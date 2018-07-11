@@ -142,3 +142,24 @@ In safari everything works fine. Altough the styling of the ```<input>``` elemen
 ##### Chrome
 Chrome is such a nice browser, no wonder everything works good!.
 ![Safari](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/chrome.jpg)
+
+### Device testing
+##### Intel phone
+On this phone everything works very fine. The ```<details>``` tag is supported and the search function works!
+![Intel](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/phones&tablets.jpg)
+
+##### Nokia
+On the Nokia the page didn't displayed in the best way. It all looked very narrow. Strange because i concentrated very well on the responsiveness of the page. The ```<details>``` tag isn't supported but the fallback works pretty fine.
+![Safari](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/phones&tablets2.jpg)
+
+##### LG
+The LG supported everything just fine. Even the ```<details>``` tag works.
+![Safari](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/phones&tablets3.jpg)
+
+##### Kindle
+What the Kindle displayed wasn't even that bad. The resolution was very low, but all my functionalities worked. Even the ```<details>``` tag is supported!.
+![Safari](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/phones&tablets4.jpg)
+
+##### Samsung
+On the Samsung everything also worked pretty fine. ```<details>``` tag is supported and the search function works good.
+![Safari](https://github.com/japgroevemaker/browser-technologies/blob/master/opdracht3/image/phones&tablets5.jpg)
